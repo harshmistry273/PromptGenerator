@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  prompt_service:
+    build: .
+    container_name: prompt_generator
+    restart: always
+
+    working_dir: /app
+    command: ["python", "main.py"]
+
+    ports:
+      - "8000:8000"
