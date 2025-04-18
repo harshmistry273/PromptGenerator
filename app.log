@@ -14,3 +14,20 @@
 2025-04-18 12:13:56,965 - INFO - Connection closed for client
 2025-04-18 12:13:56,966 - INFO - Memory cleared
 2025-04-18 12:59:34,550 - INFO - Model Initialized
+2025-04-18 13:26:30,212 - INFO - Model Initialized
+2025-04-18 13:27:35,078 - INFO - Initialized Prompt class
+2025-04-18 13:27:35,082 - INFO - Model Initialized
+2025-04-18 13:27:35,083 - INFO - Establishing connection for client
+2025-04-18 13:27:35,084 - INFO - Connection established
+2025-04-18 13:27:35,084 - INFO - Sending welcome message
+2025-04-18 13:27:35,106 - INFO - Awaiting for data from client
+2025-04-18 13:28:36,962 - INFO - Initialized Prompt class
+2025-04-18 13:28:36,968 - INFO - Model Initialized
+2025-04-18 13:28:36,969 - INFO - Establishing connection for client
+2025-04-18 13:28:36,970 - INFO - Connection established
+2025-04-18 13:28:36,971 - INFO - Sending welcome message
+2025-04-18 13:28:36,974 - INFO - Awaiting for data from client
+2025-04-18 13:28:52,464 - INFO - Connection closed for client
+2025-04-18 13:28:52,464 - INFO - Memory cleared
+2025-04-18 13:31:08,226 - INFO - Connection closed for client
+2025-04-18 13:31:08,228 - INFO - Memory cleared

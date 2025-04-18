@@ -11,7 +11,11 @@ const WebSocketClient = () => {
  
 
     useEffect(()=>{
-        const socket = new WebSocket('ws://localhost:8000/generate-prompt');
+        // local hist
+        // const socket = new WebSocket('ws://localhost:8000/generate-prompt');
+        const socket = new WebSocket('wss://promptgenerator-npgl.onrender.com/generate-prompt');
+        //server
+
         
         socket.onopen = () => {
             console.log('Connected to WebSocket server');
