@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import '../../public/WebSocketClient.css';
+import './WebSocketClient.css';
 
 const WebSocketClient = () => {
 
