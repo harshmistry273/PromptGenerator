@@ -3,7 +3,10 @@ from fastapi.responses import JSONResponse
 from src.endpoints.v1.prompt import router as prompt_router
 
 app = FastAPI()
-
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the API!"}
+    
 @app.get('/health')
 def get_health_status():
     return JSONResponse(status_code=status.HTTP_200_OK,
