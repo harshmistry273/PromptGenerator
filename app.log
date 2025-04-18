@@ -1,0 +1,15 @@
+2025-04-18 12:13:07,796 - INFO - Model Initialized
+2025-04-18 12:13:46,844 - INFO - Initialized Prompt class
+2025-04-18 12:13:46,849 - INFO - Model Initialized
+2025-04-18 12:13:46,850 - INFO - Establishing connection for client
+2025-04-18 12:13:46,851 - INFO - Connection established
+2025-04-18 12:13:46,851 - INFO - Sending welcome message
+2025-04-18 12:13:46,855 - INFO - Awaiting for data from client
+2025-04-18 12:13:52,300 - INFO - Processing message: hi
+2025-04-18 12:13:52,300 - INFO - Generating bot response for query
+2025-04-18 12:13:52,301 - INFO - Getting prompt response for User query: hi
+2025-04-18 12:13:54,257 - INFO - Got bot response {'content': 'hi', 'messages': [HumanMessage(content='hi', additional_kwargs={}, response_metadata={}), AIMessage(content="Hello! I'm PromptAI, ready to help you craft the perfect prompt. To start, could you tell me about the idea or goal you have in mind for this prompt?", additional_kwargs={}, response_metadata={})], 'text': "Hello! I'm PromptAI, ready to help you craft the perfect prompt. To start, could you tell me about the idea or goal you have in mind for this prompt?"}
+2025-04-18 12:13:54,272 - INFO - Is prompt generated: False
+2025-04-18 12:13:54,274 - INFO - Awaiting for data from client
+2025-04-18 12:13:56,965 - INFO - Connection closed for client
+2025-04-18 12:13:56,966 - INFO - Memory cleared
