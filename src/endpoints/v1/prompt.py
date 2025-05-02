@@ -32,7 +32,7 @@ async def chat_for_prompt(websocket: WebSocket):
             logger.info("Awaiting for data from client")
             data = await websocket.receive_json()
 
-            logger.info(f"Processing message: {data["message"]}")
+            logger.info(f"Processing message: {data['message']}")
             user_message = data["message"]
 
             logger.info("Generating bot response for query")

@@ -1,0 +1,51 @@
+input{
+    padding: 3px 3px 4px 1vw;
+    border: 1px solid #666eff;
+    box-shadow: 0 0 3px #666eff; 
+}
+
+input:focus-visible{
+    border: 1px solid #666eff;
+    box-shadow: 0 0 5px #666eff; 
+    outline: none;
+}
+
+button{
+    box-shadow: 0 0 5px #666eff;
+    width: min(20%, 120px);
+    padding: 0.6em 1.2em;
+    margin-left: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5em;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:focus{
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    button {
+      width: 30%;
+      font-size: 0.8rem;
+      margin-left: 0;
+    }
+  }
+
+.output{
+    display:flex;
+    flex-Direction:row;
+    text-align: left;
+    padding: 0vw 1vw;
+}
+
+.main{
+    border-radius: 1vw;
+    margin-top: 2vw;
+    padding-left: 1vw;  
+    border:1px solid #B76E79 ;
+    box-shadow: 0 0 5px #B76E79 ; 
+}
