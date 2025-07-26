@@ -4,19 +4,19 @@ import './WebSocketclient.css';
 const WebSocketClient = () => {
 
     const [input, setInput] = useState('');
-    const [answers,setAnswers] = useState([]);
+    const [answers, setAnswers] = useState([]);
     const inputRef = useRef();
     const [ws, setWs] = useState(null);
 
- 
 
-    useEffect(()=>{
+
+    useEffect(() => {
         // local hist
         // const socket = new WebSocket('ws://localhost:8000/generate-prompt');
         const socket = new WebSocket('wss://promptgenerator-npgl.onrender.com/generate-prompt');
         //server
 
-        
+
         socket.onopen = () => {
             console.log('Connected to WebSocket server');
         };
@@ -41,13 +41,13 @@ const WebSocketClient = () => {
             socket.close();
         };
 
-    },[])
+    }, [])
 
     const focusInput = () => {
         inputRef.current?.focus();
-        setTimeout(()=>{
+        setTimeout(() => {
             inputRef.current?.blur();
-        },[900])
+        }, [900])
         handleSendMessage();
     }
 
@@ -58,11 +58,21 @@ const WebSocketClient = () => {
         }
     };
 
+    const handleSendMessageViaEnter = (event) => {
+
+        if (ws && input) {
+            const messageData = { message: input };
+            if (event.key === "Enter") {
+                ws.send(JSON.stringify(messageData));
+            }
+        }
+    }
+
     return (
         <>
             <h1>Prompt Generator</h1>
             <h2>Say Anything</h2>
-            <div style={{display:'flex', flexDirection:'row'}}>
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent:'center'}}>
                 <input type="text" value={input} onChange={(e) => { setInput(e.target.value) }} placeholder='How Can I Help You?'
                     style={{
                         height: '4vh',
@@ -72,23 +82,24 @@ const WebSocketClient = () => {
                         fontSize: 'clamp(14px, 2vh, 18px)',
                     }}
                     ref={inputRef}
+                    onKeyDown={handleSendMessageViaEnter}
                 />
                 <button onClick={focusInput}> Say </button>
             </div>
             <div className='main'>
 
-            <div>
-                {
-                    answers.map((input,index)=>(
-                        <div className='output'key={index}>
-                            <p>
-                        {index+1}&nbsp;&nbsp;&nbsp; 
-                            </p>
-                        <p>{input}</p>
-                        </div>
-                    ))
-                }
-            </div>
+                <div>
+                    {
+                        answers.map((input, index) => (
+                            <div className='output' key={index}>
+                                <p>
+                                    {index + 1}&nbsp;&nbsp;&nbsp;
+                                </p>
+                                <p>{input}</p>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         </>
     );
